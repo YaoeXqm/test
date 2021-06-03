@@ -1,0 +1,229 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-size: 12px;
+}
+body{
+    background-color: rgb(236, 233, 226);
+}
+.top{
+    width: 100%;
+    height: 27px;
+}
+.wrap{
+    width: 100%;
+    margin: 0 auto;
+}
+.content{
+    height:80px;
+}
+.content-logo{
+    width: 400px;
+    float: left;
+    height: 28px;
+    margin-top: 28px;
+}
+.content-inform{
+    width: 235px;
+    float: right;
+    height: 28px;
+    margin-top: 30px;
+}
+.content-logo img{
+    vertical-align: middle;
+    margin-left: 30px;
+}
+.content-inform img{
+    vertical-align: middle;
+    margin-left: 30px;
+}
+.main1{
+    padding-left:40px;
+    font-size: 14px;
+}
+.main2{
+    padding-left:40px;
+    font-size: 14px;
+}
+.main3{
+    padding-left:5px;
+    font-size: 14px;
+}
+.main4{
+    padding-left:5px;
+    font-size: 14px;
+}
+.main{
+    height:380px;
+    width: 100%;
+    margin-top:80px;
+    border: 1px solid red;
+}
+.main-nav{
+    height: 380px;
+    width: 160px;
+    float: left;
+    border: 1px solid blue;
+    margin-left: 25px;
+    line-height: 3;
+  
+    
+    text-align: left;
+    padding-left: 23px;
+}
+.list{  
+    list-style-type:none;
+    font-size: 20px;
+}
+.main-sign-in{
+    height: 260px;
+    width: 180px;
+    background-color: white;
+    float: right;
+    margin-right: 25px;
+    margin-top: 60px;
+    line-height: 2;
+    text-align: center;
+}
+.top1{
+    font-size: 18px;
+    font-weight: bold;
+}
+.top2{
+    font-size: 16px;
+}
+.main-sign-in img{padding-top: 24px;}
+.main-sign-in form{
+    height: 30px;
+    width: 125px;
+    margin-top: 25px;
+    margin-left: 23px;
+    background-color: rgb(76, 180, 76);
+   }
+.main-sign-in input{font-size: 16px;line-height: 30px;background-color: rgb(76, 180, 76);border:none;}
+.main-theme1{
+    width: 1200px;
+    height: 371px;
+    
+ 
+    float: left;
+    margin-left: 25px;
+}
+.main-theme1-title{
+    width: 1200px;
+    height: 71px;
+    font-size: 24px;
+    line-height: 71.33px;
+    
+}
+.main-theme1-content-left{
+    width: 480px;
+    height: 300px;
+    float: left;
+}
+.main-theme1-content-left img{
+    width: 480px;
+    height: 300px;
+}
+.main-theme1-content-right{
+    width: 720px;
+    height: 300px;
+    background-color: white;
+    float: right;
+}
+.main-theme1-content-right ul{
+   
+    padding-left: 40px;
+}
+.main-theme1-content-right li{
+font-size: 16px;
+line-height: 2.5;
+}
+.main-theme1-content-right span{
+    color: grey;font-size: 16px;
+}
+.main-theme2{
+    width: 1200px;
+    height: 400px;
+  
+    float: left;
+    margin-left: 25px;
+}
+.main-theme2-title{
+    width: 1200px;
+    height: 81.33px;
+}
+.main-theme2-title-left{
+    font-size: 24px;
+    float: left;
+    line-height: 81.33px;
+}
+.main-theme2-title-right{
+    font-size: 16px;
+    float: right;
+    line-height: 81.33px;
+}
+.main-theme2-title-right img{
+    vertical-align: middle;
+    margin-left: 30px;
+}
+.main-theme2-content{
+    width: 1200px;
+    height: 310px;
+    padding-left: 10px;
+}
+.main-theme2-content-class1{
+    width: 300px;
+    height: 310px;
+    float: left;
+}
+.main-theme2-content-class1 img{
+    width: 280px;
+    height: 175px;
+    padding:5px 5px 10px 5px;
+}
+.main-theme2-content-class2{
+    width: 300px;
+    height: 310px;
+    float: left;
+}
+.main-theme2-content-class2 img{
+    width: 280px;
+    height: 175px;
+    padding:5px 5px 10px 5px;
+}
+.main-theme2-content-class3{
+    width: 300px;
+    height: 310px;
+    float: left;
+}
+.main-theme2-content-class3 img{
+    width: 280px;
+    height: 175px;
+    padding:5px 5px 10px 5px;
+}
+.main-theme2-content-class4{
+    width: 300px;
+    height: 310px;
+    float: left;
+}
+.main-theme2-content-class4 img{
+    width: 280px;
+    height: 175px;
+    padding:5px 5px 10px 5px;
+}
+
+.two img{
+    width: 30px;
+    height: 30px;
+    vertical-align: middle;
+    margin-left: 30px;
+    padding-left: 0%;
+}
+.two{padding: left 0;}
+.one{font-size: 18px;}
+.three{font-size: 16px;}
+.fore{font-size: 16px;
+      color: grey;}
+.five{font-size: 16px;
+      color: red;}

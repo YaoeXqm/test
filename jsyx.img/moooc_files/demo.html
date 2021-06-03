@@ -1,0 +1,149 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="Keywords" content="">
+        <meta name="Description" content="">
+        <title>兮夜老师</title>
+        <style>/* css样式表 网页装饰 */
+            /* css reset */
+            *{/* 选择所有标签 */
+                margin: 0;/* 外边距 0不用给单位 */
+            }
+            .wrap{
+                width: 850px;/* 宽度: 200像素; */
+                height: 400px;/*高度 */
+                margin: 50px auto;/* 上下 左右自动居中 */
+                background-color: #096;/* 背景颜色: 原谅绿; */
+            }
+            .content{
+                overflow: hidden;/* 超出隐藏 */
+                position: relative;/* 相对定位 监管绝对定位 */
+                width: 190px;
+                height: 180px;
+                background-color: red;
+            }
+            .content:hover .hide{/* 当你鼠标移动到名字叫content里让子集hide执行{}中代码 */
+                bottom: 0;
+            }
+            .content:hover .images{
+                transform: scale(1.3);/* css3变换属性 比例(倍) */
+            }
+            .images{
+                width: 190px;
+                height: 180px;
+                transition: .5s;/* css3动画过渡 */
+            }
+            .hide{
+                position: absolute;/* 绝对定位 */
+                left: 0;
+                bottom: -70px;
+                width: 190px;
+                height: 70px;
+                /* rgba(红色0-255,绿色,蓝,透明度0-1) */
+                background-color: rgba(0,0,0,.7);
+                color: #fff;/* 文字颜色 白色 */
+                transition: .5s;/* css3动画过渡效果 */
+            }
+            .hide-content{
+                padding: 10px;/* 内边距 */
+            }
+            .hide-img{
+                width: 20px;
+                height: 20px;
+                border-radius: 50%;/* css3圆角属性 */
+                vertical-align: middle;/* 基线对齐方式 居中 */
+            }
+            .hide-title{
+                margin-top: 10px;
+            }
+            
+            
+            /*
+                绝对定位 -> 没有相对参考物的情况下 浏览器就是参考物
+                相对定位 -> 相对参考物 -> 父相子绝
+            */
+        </style>
+    </head>
+    <body><!-- 写给用户看的 -->
+        <div class="wrap"><!-- 自定义类名 盒子标签 -->
+            <div class="content">
+                <!-- img标签 加载图片的标签 src图片路径 -->
+                <img class="images" src="images/1.jpg">
+                <div class="hide">
+                    <div class="hide-content">
+                        <h5>晴天娃娃 璐璐</h5>
+                        <div class="hide-title">
+                            <img class="hide-img" src="images/01.jpg">
+                            <span>柯子</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
+<!--
+    绿色注释
+    为了工作 -> 
+    标签语义化 -> 
+    h1 主标题 -> 唯一 
+    h2 -> 副标题
+    h3
+    vscode -> 代码提示补全
+
+    javascript -> js 学好
+
+    兼职接单 -> 
+    全职开发 -> 
+
+
+    java php .net c/c++ ->不建议  学历要求
+
+
+    开发
+    html css js(很重要) vue.js/react.js/node.js
+
+    开发能力 -> 
+
+    跨平台开发
+
+    P4(12K-15K) -> 
+    
+    1 html css -> 1个月 -> 京东 -> 上线(服务器/域名)
+      js -> 很重要 -> 2个月 -> 封装jquery.js -> 花里胡哨
+      写页面 -> 
+    
+    2 框架实战经验
+        vue.js/react.js -> 见过的APP -> 饿了么/网易云
+        node.js -> 技术博客 -> 全栈 -> 
+        入门 -> 9-12K
+
+    3 全栈架构 -> 设计模式 -> 15K+
+
+    webapp -> 跨平台开发  大前端时代
+    小程序
+    H5大数据可视化
+
+    9K-12K -> 全栈就业 -> 5个月 -> 12阶段 -> 7880 -> 助学 -> 6380
+    15K+ -> 全栈架构 -> 6.5个月 -> 123阶段
+
+    在线晚上8.30-10.30 -> 
+    助学分期 -> 12期
+    利息 -> 1000+ -> 免息 -> 吴彦祖
+
+
+    直播 -> 录播
+
+    申请国家助学 -> 预定500 -> 一天十几块 
+    阿里云ACA认证 -> 推荐
+
+    国家二级 -> 
+
+    ui -> 
+    测试
+    运维 
+
+    线下 -> 全日制 一天8小时 -> 未成年 2w+ 父母
+
+-->

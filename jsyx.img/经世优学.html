@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<!-- saved from url=(0034)http://study.huatec.com/index.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+	<title>经世优学</title>
+	<script src="./经世优学_files/hm.js.下载"></script><script type="text/javascript" src="./经世优学_files/jquery-2.1.0.js.下载"></script>
+	<script type="text/javascript" src="./经世优学_files/config.js.下载"></script>
+	<script type="text/javascript" src="./经世优学_files/commen_jquery.cookie.js.下载"></script>
+	<script type="text/javascript" src="./经世优学_files/layui.js.下载"></script>
+	<script type="text/javascript" src="./经世优学_files/sea.js.下载"></script>
+	<link rel="stylesheet" href="./经世优学_files/layui.css">
+	<link rel="stylesheet" href="./经世优学_files/reset.css">
+	<link rel="stylesheet" href="./经世优学_files/index.css">
+	<link rel="stylesheet" href="./经世优学_files/common.css">
+	
+<link id="layuicss-layer" rel="stylesheet" href="./经世优学_files/layer.css" media="all"></head>
+
+<body>
+	<div id="login-pop" style="display: none;"><!--<!DOCTYPE html>
+<html>
+
+	<head>-->
+
+<title></title>
+<!--<link rel="stylesheet" href="/plugIn/layui/css/layui.css" />-->
+<!--<link rel="stylesheet" href="/common/css/reset.css" />-->
+<link rel="stylesheet" href="./经世优学_files/login.css">
+<!--<script type="text/javascript" src="/plugIn/js/jquery-2.1.0.js"></script>-->
+<!--<script type="text/javascript" src="/plugIn/js/service/config.js"></script>
+		<script type="text/javascript" src="/plugIn/js/sea.js"></script>-->
+<!--</head>-->
+<script type="text/javascript" src="./经世优学_files/md5.js.下载"></script>
+<!--<body style="background: #ccc;">-->
+<div class="login-content">
+    <div class="login-pop-close">
+        <img class="login-pop-closebtn" src="./经世优学_files/guanbi.png">
+    </div>
+    <ul class="login-title">
+        <li class="login-title-item active" data-index="1">密码登录</li>
+        <li class="login-title-item" data-index="2">短信验证码登录</li>
+    </ul>
+    <form class="layui-form">
+        <div class="password-login">
+            <div class="layui-input-block login-input">
+                <div class="login-icon"><img src="./经世优学_files/login_name.png"></div>
+                <input type="text" autocomplete="off" placeholder="请输入账号/手机号" class="layui-input username">
+            </div>
+            <div class="username-error">
+                <img src="./经世优学_files/cuowutishi.png">
+                <span>请输入账号/手机号</span>
+            </div>
+            <div class="layui-input-block login-input">
+                <div class="login-icon"><img src="./经世优学_files/login_password.png"></div>
+                <input type="password" autocomplete="off" placeholder="请输入密码" class="layui-input password">
+            </div>
+            <div class="password-error">
+                <img src="./经世优学_files/cuowutishi.png">
+                <span>请输入密码</span>
+            </div>
+        </div>
+        <div class="shortmessage-login">
+            <div class="layui-input-block login-input">
+                <div class="login-icon"><img src="./经世优学_files/login_tel.png"></div>
+                <input type="text" autocomplete="off" placeholder="请输入手机号" class="layui-input telnumb">
+            </div>
+            <div class="telnumb-error">
+                <img src="./经世优学_files/cuowutishi.png">
+                <span>请输入手机号</span>
+            </div>
+            <div class="layui-input-block login-input">
+                <input type="text" autocomplete="off" placeholder="请输入右侧四位数字" class="layui-input fournumb">
+                <div class="fournumb-btn">
+                    <img class="img-code" src="http://study.huatec.com/index.html">
+                </div>
+            </div>
+            <div class="fournumb-error">
+                <img src="./经世优学_files/cuowutishi.png">
+                <span>请输入右侧四位数字</span>
+            </div>
+            <div class="layui-input-block login-input">
+                <input type="text" autocomplete="off" placeholder="请输入验证码" class="layui-input verifynumb">
+                <button type="button" class="layui-btn layui-btn-primary verifynumb-btn">
+					获取验证码
+				</button>
+            </div>
+            <div class="verifynumb-error">
+                <img src="./经世优学_files/cuowutishi.png">
+                <span>请输入验证码</span>
+            </div>
+        </div>
+        <div id="protocol">
+            <input class="protocol1" type="checkbox" name="" title="" lay-skin="primary" lay-filter="protocol1"><div class="layui-unselect layui-form-checkbox" lay-skin="primary"><i class="layui-icon"></i></div> 我已阅读并同意经世优学
+            <span id="protocol2">《用户使用协议》</span>&amp;<span id="protocol1">《隐私政策协议 》</span>
+
+
+
+            <!-- <input class="protocol2" type="checkbox" name="" title="" lay-skin="primary" lay-filter="protocol2"> -->
+
+        </div>
+
+        <button data-type="1" type="button" class="layui-btn login-btn-to">登录</button>
+        <!-- <div class="layui-input-inline auto-login">
+			<input type="checkbox" name='auto-login' lay-skin="primary" title="十天免登录">
+		</div> -->
+        <div class="forget-password"><a href="http://study.huatec.com/common/password_forget.html" target="_blank">忘记密码？</a>
+            <!-- <a href="/common/register.html" target="_blank">|注册账号</a> -->
+        </div>
+    </form>
+    <div class="guest">您可以使用 账号：guest 密码：guest 登录系统</div>
+</div>
+<!--
+	</body>
+
+</html>-->
+<script>
+    seajs.config({
+        map: [
+            [".css", ".css?v=" + config.version],
+            [".js", ".js?v=" + config.version]
+        ]
+    });
+    seajs.use(["/common/js/login"], function(ev) {
+        ev.index();
+    });
+</script></div>
+	<div id="sideBar" class="sideBar"><div class="public-address">
+    <img src="./经世优学_files/gongzhonghao.png">
+    <p>公众号</p>
+    <div class="wechat-icon">
+        <img src="./经世优学_files/gongzhonghao.jpg">
+        <p>微信关注经世优学，及时收到消息通知</p>
+    </div>
+</div>
+<div class="download-app">
+    <img src="./经世优学_files/xiazai.png">
+    <p>下载APP</p>
+
+    <div class="teacher-app">
+    </div>
+    <div class="student-app" style="height:auto;">
+        <img src="./经世优学_files/erweima.png">
+        <p>扫码下载经世优学APP</p>
+        <img src="./经世优学_files/zb-code.png" style="margin-top:20px;">
+        <p>扫码下载教师直播APP（仅支持安卓）</p>
+        <a class="click-a" href="https://obs-sp.obs.cn-north-1.myhuaweicloud.com/huatec/app/com.huatec.yxzb_1.0.1.apk" target="_blank">点击下载</a>
+
+    </div>
+</div>
+<div class="feedback">
+    <img src="./经世优学_files/fankui.png">
+    <p>问题反馈</p>
+</div>
+<!--<div class="my-ranking">
+    <img src="/common/img/paihangbang.png" />
+    <p>我的排行</p>
+</div>
+<div class="user-help">
+    <img src="/common/img/bangzhu.png" />
+    <p>使用帮助</p>
+</div>-->
+<div class="to-top" style="display: none;">
+    <img src="./经世优学_files/fanhuidingbu.png">
+    <p>返回顶部</p>
+</div>
+<script type="text/javascript">
+    //公众号二维码显示
+    $('.public-address').hover(function () {
+        $('.wechat-icon').show()
+    }, function () {
+        $('.wechat-icon').hide()
+    })
+    //下载APP二维码显示
+    $('.download-app').hover(function () {
+        // $('.teacher-app').show()
+        $('.student-app').show()
+    }, function () {
+        // $('.teacher-app').hide()
+        $('.student-app').hide()
+    })
+    $(".feedback").click(function () {
+        let path = window.location.href + '';
+        if (path.indexOf("live_detail.html") >= 0) {
+            window.sessionStorage.setItem("feedbackType", 1);
+           
+            let feedbackVideoId = path.split("?id=")[1];
+             if(feedbackVideoId.indexOf("&")>=0){
+                feedbackVideoId=feedbackVideoId.split("&")[0];
+            }
+            window.sessionStorage.setItem("feedbackVideoId", feedbackVideoId);
+        } else if (path.indexOf("course_study.html") >= 0) {
+            window.sessionStorage.setItem("feedbackType", 2);
+            window.sessionStorage.setItem("feedbackVideoId", "");
+            if ($(".video-carousel-box").length > 0 && $(".video-carousel-box").children("li").length > 0) {
+                $.each($(".video-carousel-box").children("li"), function (i, element) {
+                    if ($(element).hasClass("active")) {
+                        window.sessionStorage.setItem("feedbackVideoId", $(element).attr("data-id"));
+                    }
+                })
+            }
+        } else if (path.indexOf("luboinfor.html") >= 0) {
+            window.sessionStorage.setItem("feedbackType", 3);
+            window.sessionStorage.setItem("feedbackVideoId", path.split("&sourceId=")[1]);
+
+        } else {
+            window.sessionStorage.setItem("feedbackType", 0);
+        }
+        if ($.cookie("login")) {
+            if ($.cookie("role_code") == "P017") {
+                window.open("/common/feedbackStudent.html")
+            } else {
+                window.open("/common/feedback.html")
+            }
+        } else {
+            $('#login-pop').show();
+        }
+
+    })
+</script></div>
+
+	<nav id="nav" class="nav" data-index="index"><style>
+.logo{
+	position: relative;
+}
+.jisu{
+	position: absolute;
+	top: 5px;
+	left: 104px;
+}
+</style>
+<div class="nav-main">
+	<div class="logo">
+		<img src="./经世优学_files/logo.png">
+		<img class="jisu" src="./经世优学_files/jisuban.png" alt="">
+	</div>
+	<ul class="nav-ul">
+		<li class="item" data-index="1">精品课程<i></i></li>
+		<li class="item" data-index="2">名师直播<i></i></li>
+		<!--<li class="item" data-index='3'>资源库<i></i></li>-->
+	</ul>
+	<!-- <a href="http://study.huatec.com/" target="_blank" class="back-old" id="backOld">返回旧版</a> -->
+	<div class="logout">退出</div>
+	<a class="userbox" id="userBox">
+		<img src="./经世优学_files/touxiang.png">
+		<span></span>		
+	</a>
+	<div class="login">
+		<img src="./经世优学_files/shouye_denglu.png">
+		<span>登录</span>
+	</div>
+	<div class="message">
+		<img src="./经世优学_files/shouye_xiaoxi.png">
+		<span>消息</span>
+		<span class="nav-message-numb">(0)</span>
+	</div>
+
+</div></nav>
+	<div class="main-box">
+		<div class="banner" id="bannerBackground">
+			<div class="banner-cont">
+				<div class="main-menu">
+					<ul class="menu-item scroll-bar">
+						<!--<li class="menu-title">通信</li>
+							<li class="menu-title">移动互联</li>-->
+					<li data-id="1" class="menu-title">通信</li><li data-id="C8A374D56B6C490B865A714ACC425D6D" class="menu-title">智能制造</li><li data-id="4" class="menu-title">移动互联</li><li data-id="F8E42471DAEE47C493657431D272B42C" class="menu-title">物联网</li><li data-id="67525B2332C94D4FACA0516B323324B8" class="menu-title">云计算</li><li data-id="EA81BA039BE64509A80DEB2966725D50" class="menu-title">大数据</li><li data-id="5" class="menu-title">职业管理</li><li data-id="AA4A33D47C2F405EB4C3970C3188C1FC" class="menu-title">教师教学（企业）</li><li data-id="7C97D9CF75784182955F77C24C706577" class="menu-title">标准化课程（企业）</li><li data-id="58C73695BB2A46A3AA46558E709E87CD" class="menu-title">精品课程（项目部）</li></ul>
+					<div class="menu-list" style="display: none;">
+						<div class="menu-list-title">
+							<div class="menu-list-text">物联网</div>
+							<div class="menu-list-line"></div>
+						</div>
+						<ul class="menu-list-ul"><li title="物联网APP" data-id="F8E42471DAEE47C493657431D272B42C|7145D96B006E4C84B18D49C6E70E35E5">物联网APP</li><li title="物联网方案设计与实现" data-id="F8E42471DAEE47C493657431D272B42C|F3E4412939CD4B359FF61F11D2F7BD8C">物联网方案设计与实现</li><li title="物联网云平台设计与开发" data-id="F8E42471DAEE47C493657431D272B42C|0FED7E6F78BA4C449625445107B01EB6">物联网云平台设计与开发</li><li title="物联网智能网关设计与开发" data-id="F8E42471DAEE47C493657431D272B42C|49DF654B3FF5409A87EB58C7F9ACBA12">物联网智能网关设计与开发</li></ul>
+					</div>
+				</div>
+				<div class="login-box" style="display: block;">
+					<div id="nologin">
+						<h4>经世优学欢迎您！</h4>
+						<h5>登录查看更多精彩内容</h5>
+						<div class="login-img"><img src="./经世优学_files/touxiang.png"></div>
+						<a class="login-btn" id="bannerLogin">登录</a>
+					</div>
+					<div id="islogin" style="display: none;">
+						<div class="login-img"><img src="./经世优学_files/touxiang.png"></div>
+						<h4></h4>
+						<h5></h5>
+						<a class="login-btn" id="toSpace"></a>
+					</div>
+				</div>
+			</div>
+			<!-- <div class="layui-carousel" id="banner" lay-filter="banner">
+					<div carousel-item>
+						<div data-color='#5B57E3 ' class="banner-item banner-theme"></div>
+						<div data-color='#0098c7' class="banner-item banner1"></div>
+					</div>
+				</div> -->
+			<div id="bannerBox"><style>
+	.banner-box{
+		height: 380px;
+	}
+.banner-item {
+	background-position: center center;
+	background-size: 1200px 380px;
+	background-repeat: no-repeat;
+}
+
+.banner-theme {
+	background-image: url(/theme/images/banner-theme.png);
+	background-color: #5B57E3 ;
+	cursor: pointer;
+}
+
+.banner1 {
+	background-image: url(/theme/images/banner2.png);
+	background-color: #0098c7;
+	cursor: pointer;
+}
+.banner3{
+	background-image: url(/theme/images/banner3.jpg);
+	background-color: #07056F;
+	cursor: pointer;
+}
+.banner4{
+	background-image: url(/theme/images/banner4.jpg);
+	background-color: #07073E;
+	cursor: pointer;
+}
+#banner {
+	position: absolute;
+	top: 80px;
+}
+
+.banner-cont {
+	position: relative;
+}
+
+</style>
+<div class="layui-carousel" id="banner" lay-filter="banner" lay-anim="fade" lay-indicator="inside" lay-arrow="none" style="width: 100%; height: 380px;">
+	<div carousel-item="">
+		<div data-color="#07073E" class="banner-item banner4 layui-this" style="background-color: rgb(7, 7, 62);"></div>
+		<div data-color="#07056F" class="banner-item banner3" style="background-color: rgb(7, 5, 111);"></div>
+		<div data-color="#0098c7" class="banner-item banner1" style="background-color: rgb(0, 152, 199);"></div>
+		<div data-color="#5B57E3 " class="banner-item banner-theme" style="background-color: rgb(91, 87, 227);"></div>
+	</div>
+<div class="layui-carousel-ind"><ul><li class="layui-this"></li><li class=""></li><li class=""></li><li class=""></li></ul></div><button class="layui-icon layui-carousel-arrow" lay-type="sub"></button><button class="layui-icon layui-carousel-arrow" lay-type="add"></button></div>
+<script type="text/javascript">
+layui.use(['layer', 'carousel'], function() {
+	var layer = layui.layer,
+		carousel = layui.carousel;
+	//建造实例
+	carousel.render({
+		elem: '#banner',
+		width: '100%', //设置容器宽度
+		height: '380px',
+		arrow: 'always', //始终显示箭头
+		anim: 'fade', //切换动画方式
+		arrow: 'none'
+	});
+	carousel.on('change(banner)', function(obj) { //test1来源于对应HTML容器的 lay-filter="test1" 属性值
+		/*console.log(obj.index); //当前条目的索引
+		console.log(obj.prevIndex); //上一个条目的索引
+		console.log(obj.item.attr('data-color')); //当前条目的元素对象*/
+		obj.item.css('backgroundColor', obj.item.attr('data-color'))
+
+	});
+});
+//banner上面的点击事件
+$('.banner-theme').click(function(event) {
+	/* Act on the event */
+	window.open("/theme/index.html");
+});
+$('.banner1').click(function(event) {
+	/* Act on the event */
+	window.open("/theme/1_课程大纲-彩页简介版6.pdf");
+});
+$('.banner3').click(function(event) {
+	/* Act on the event */
+	window.open("/theme/ict.html");
+});
+$('.banner4').click(function(event) {
+	/* Act on the event */
+	window.open("/theme/zhizao.html");
+});
+</script></div>
+		</div>
+		<div class="school-icon" style="display:none">
+			<div class="school clearfix">
+				<div class="school-icon-shadow-l"></div>
+				<div class="school-icon-shadow-r"></div>
+
+				<div class="school-icon-title">
+					<a href="http://study.huatec.com/common/view/show/school.html" target="_blank"></a>
+				</div>
+				<div class="school-icon-box">
+					<ul class="school-icon-ul clearfix" style="left: -40243px;">
+
+					</ul>
+					<ul class="school-icon-ul2 clearfix" style="left: -40243px;">
+
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="teacher-live">
+			<h4 class="teacher-live-title">名师直播</h4>
+			<div class="teacher-live-box">
+				<div class="teacher-live-left" data-id="1326735248046788609">
+					<img src="./经世优学_files/7.png" id="teacherImg">
+					<img src="./经世优学_files/zhunbeizhong.png" style="position: absolute;top:0;left:0;width: 100px;height: 100px;" id="statusImg">
+
+					<div class="teacher-live-desc">
+						<div class="text-over" style="display:inline-block">
+						<img class="teacher-icon" src="./经世优学_files/avatar.png"></div>
+						<span class="teacher-name text-over">张老师-三明学院直播间</span>
+						<!-- <span class="teacher-school text-over"></span> -->
+						<!--<img src="common/img/shouye-yuyue.png" />-->
+						<span class="live-status text-over"></span>
+						<!-- <span class="teacher-numb"></span> -->
+					</div>
+				</div>
+				<ul class="teacher-live-right">
+					<div class="teacher-live-line"></div>
+					<!--<li class="teacher-live-li ing" data-img='common/img/course1.png'>
+							<span class="teacher-live-icon"><img src="common/img/zhibo.png"/></span>
+							<span class="teacher-live-status">直播中</span>
+							<span class="teacher-live-name">职业素质公开课</span>
+							<span class="teacher-live-btn">去观看</span>
+						</li>-->
+				<li data-id="1332263403142615042" data-teachername="undefined" data-depname="研发部" data-studentnumb="0" data-teachericon="http://fs.huatecsmart.com/avatar/201709/20/78C6907536E0F7111505892161601.jpg" class="teacher-live-li text-over ago" data-img="undefined"><span class="teacher-live-icon"></span><span class="teacher-live-status">已结束</span><span class="teacher-live-name">test1127</span></li><li data-id="1332155531258023938" data-teachername="undefined" data-depname="研发部" data-studentnumb="0" data-teachericon="http://fs.huatecsmart.com/avatar/201709/20/78C6907536E0F7111505892161601.jpg" class="teacher-live-li text-over ago" data-img="undefined"><span class="teacher-live-icon"></span><span class="teacher-live-status">已结束</span><span class="teacher-live-name">test1127</span></li><li data-id="1330690109644001282" data-teachername="undefined" data-depname="上海商学院" data-studentnumb="0" data-teachericon="http://fs.huatecsmart.com/avatar/default/avatar.png" class="teacher-live-li text-over ago" data-img="undefined"><span class="teacher-live-icon"></span><span class="teacher-live-status">已结束</span><span class="teacher-live-name">测试 OBS推送</span></li><li data-id="1320650444063686658" data-teachername="undefined" data-depname="数据中心" data-studentnumb="0" data-teachericon="http://fs.huatecsmart.com/avatar/default/avatar.png" class="teacher-live-li text-over ago" data-img="undefined"><span class="teacher-live-icon"></span><span class="teacher-live-status">已结束</span><span class="teacher-live-name">测试</span></li><li data-id="1300988982977466370" data-teachername="undefined" data-depname="北京汇佳" data-studentnumb="0" data-teachericon="http://fs.huatecsmart.com/avatar/default/avatar.png" class="teacher-live-li text-over ago" data-img="undefined"><span class="teacher-live-icon"></span><span class="teacher-live-status">已结束</span><span class="teacher-live-name">电子商务</span></li><li data-id="1300989614355431426" data-teachername="undefined" data-depname="北京汇佳" data-studentnumb="0" data-teachericon="http://fs.huatecsmart.com/avatar/default/avatar.png" class="teacher-live-li text-over ago" data-img="undefined"><span class="teacher-live-icon"></span><span class="teacher-live-status">已结束</span><span class="teacher-live-name">人力资源培训与开发</span></li><li data-id="1300989862721142785" data-teachername="undefined" data-depname="北京汇佳" data-studentnumb="0" data-teachericon="http://fs.huatecsmart.com/avatar/default/avatar.png" class="teacher-live-li text-over ago" data-img="undefined"><span class="teacher-live-icon"></span><span class="teacher-live-status">已结束</span><span class="teacher-live-name">国际货运代理</span></li></ul>
+			</div>
+
+		</div>
+		<div class="hot-course">
+
+			<div class="clearfix">
+				<div class="hot-course-title">公开课</div>
+				<div class="change" data-page="1" id="mainHotCoursePage">
+					<img src="./经世优学_files/shouye_qiehuan.png">
+					<span>换一换</span>
+				</div>
+			</div>
+
+			<ul class="hot-course-box clearfix public-course"><li class="hot-course-item pub-list" data-id="5637A690154D4502B8F2D6958C6BAF58"><div class="hot-course-img"><img src="./经世优学_files/1582454935066030.jpg"></div><h6 class="new-course-name">工业机器人技术基础【青】</h6><div class="new-course-msg"><img src="./经世优学_files/avatar.png"><span class="new-course-teacher">智造名师团-</span><span class="new-course-school">华晟经世集团</span></div><p class="hot-course-numb">15人学习</p></li><li class="hot-course-item pub-list" data-id="28858C7F49024C538A09035265BC403C"><div class="hot-course-img"><img src="./经世优学_files/1582454620906358.jpg"></div><h6 class="new-course-name">工业机器人现场编程（FANUC）</h6><div class="new-course-msg"><img src="./经世优学_files/avatar.png"><span class="new-course-teacher">智造名师团-</span><span class="new-course-school">华晟经世集团</span></div><p class="hot-course-numb">69人学习</p></li><li class="hot-course-item pub-list" data-id="6D2FE45725AB4E688AD3FCC654F720C5"><div class="hot-course-img"><img src="./经世优学_files/1582455250746814.jpg"></div><h6 class="new-course-name">机器人离线编程仿真RoboGuide</h6><div class="new-course-msg"><img src="./经世优学_files/avatar.png"><span class="new-course-teacher">智造名师团-</span><span class="new-course-school">华晟经世集团</span></div><p class="hot-course-numb">311人学习</p></li><li class="hot-course-item pub-list" data-id="515B8B859344460CA4BDBFDBB2ACFCB0"><div class="hot-course-img"><img src="./经世优学_files/1582455407007177.jpg"></div><h6 class="new-course-name">工业机器人现场编程（ABB）</h6><div class="new-course-msg"><img src="./经世优学_files/avatar.png"><span class="new-course-teacher">智造名师团-</span><span class="new-course-school">华晟经世集团</span></div><p class="hot-course-numb">1077人学习</p></li></ul>
+
+
+
+		</div>
+		<div class="hot-course">
+			<div class="clearfix">
+				<div class="hot-course-title">热门课程</div>
+				<!-- <div class="change" data-page='1' id="mainHotCoursePage">
+						<img src="common/img/shouye_qiehuan.png" />
+						<span>换一换</span>
+					</div> -->
+			</div>
+
+			<ul class="hot-course-box clearfix hot-course-list"><li class="hot-course-item hot-list" data-id="9617B833917B4736AAE28A33EA688248"><div class="hot-course-img"><img src="./经世优学_files/1596177460198347.jpg"></div><h6 class="new-course-name">5G 1+X 移动网络运维初级</h6><div class="new-course-msg"><img src="./经世优学_files/avatar.png"><span class="new-course-teacher">智造名师团-</span><span class="new-course-school">华晟经世集团</span></div><p class="hot-course-numb">104人学习</p></li><li class="hot-course-item hot-list" data-id="2C2659EF5DFD4178A65CE4442359D645"><div class="hot-course-img"><img src="./经世优学_files/1596188720142859.jpg"></div><h6 class="new-course-name">5G 1+X 移动网络运维（线上培训）</h6><div class="new-course-msg"><img src="./经世优学_files/avatar.png"><span class="new-course-teacher">经世名师团-</span><span class="new-course-school">华晟经世</span></div><p class="hot-course-numb">24人学习</p></li><li class="hot-course-item hot-list" data-id="55FBCF1D1AC54F2D957408D0F956BFF3"><div class="hot-course-img"><img src="./经世优学_files/1510561877857556.jpg"></div><h6 class="new-course-name">光传输技术</h6><div class="new-course-msg"><img src="./经世优学_files/avatar.png"><span class="new-course-teacher">经世名师团-</span><span class="new-course-school">华晟经世</span></div><p class="hot-course-numb">4206人学习</p></li><li class="hot-course-item hot-list" data-id="BB153B63A9A84329B164A49DA5375283"><div class="hot-course-img"><img src="./经世优学_files/1555572648845659.jpg"></div><h6 class="new-course-name">Hadoop大数据平台集群部署与开发</h6><div class="new-course-msg"><img src="./经世优学_files/avatar.png"><span class="new-course-teacher">经世名师团-</span><span class="new-course-school">经世学院</span></div><p class="hot-course-numb">742人学习</p></li></ul>
+
+
+		</div>
+		<!-- <div class="new-course">
+				<div class="clearfix">
+					<div class="hot-course-title">最新课程</div>
+					<div class="change" data-page='1' id="mainNewCoursePage">
+						<img src="common/img/shouye_qiehuan.png" />
+						<span>换一换</span>
+					</div>
+				</div>
+				<ul class="new-course-box clearfix">
+					<!--<li class="new-course-item">
+						<div class="new-course-img">
+							<img src="common/img/course1.png" />
+						</div>
+						<h6 class="new-course-name">APP Store流量增长突围之道</h6>
+						<div class="new-course-msg">
+							<img src="common/img/touxiang.png">
+							<span class="new-course-teacher">刘长春-</span>
+							<span class="new-course-school">辽宁铁道职业技术学院</span>
+						</div>
+					</li>--
+				</ul>
+
+			</div> -->
+		<!--活跃度-->
+		<div class="active-con">
+			<div class="main-con clearfix">
+				<div class="active-left left">
+					<h2 class="active-h2">活跃分布</h2>
+					<ul class="active-ul clearfix">
+						<li> <i class="teacher-ico"></i>老师</li>
+						<li> <i class="student-ico"></i>学生</li>
+					</ul>
+					<ul class="student-point-area point-area">
+						<li class="student-point-area1">
+							<i class="student-ico"></i>
+							<div class="point-10"></div>
+							<div class="point-70"></div>
+						</li>
+						<li class="student-point-area2">
+							<i class="student-ico"></i>
+							<div class="point-10"></div>
+							<div class="point-70"></div>
+						</li>
+						<li class="student-point-area3">
+							<i class="student-ico"></i>
+							<div class="point-10"></div>
+							<div class="point-70"></div>
+						</li>
+						<li class="student-point-area4">
+							<i class="student-ico"></i>
+							<div class="point-10"></div>
+							<div class="point-70"></div>
+						</li>
+						<li class="student-point-area5">
+							<i class="student-ico"></i>
+							<div class="point-10"></div>
+							<div class="point-70"></div>
+						</li>
+						<li class="student-point-area6">
+							<i class="student-ico"></i>
+							<div class="point-10"></div>
+							<div class="point-70"></div>
+						</li>
+					</ul>
+					<ul class="teacher-point-area point-area">
+						<li class="teacher-point-area1">
+							<i class="teacher-ico"></i>
+							<div class="point-10"></div>
+							<div class="point-70"></div>
+						</li>
+						<li class="teacher-point-area2">
+							<i class="teacher-ico"></i>
+							<div class="point-10"></div>
+							<div class="point-70"></div>
+						</li>
+						<li class="teacher-point-area3">
+							<i class="teacher-ico"></i>
+							<div class="point-10"></div>
+							<div class="point-70"></div>
+						</li>
+						<li class="teacher-point-area4">
+							<i class="teacher-ico"></i>
+							<div class="point-10"></div>
+							<div class="point-70"></div>
+						</li>
+						<li class="teacher-point-area5">
+							<i class="teacher-ico"></i>
+							<div class="point-10"></div>
+							<div class="point-70"></div>
+						</li>
+						<li class="teacher-point-area6">
+							<i class="teacher-ico"></i>
+							<div class="point-10"></div>
+							<div class="point-70"></div>
+						</li>
+						<li class="teacher-point-area7">
+							<i class="teacher-ico"></i>
+							<div class="point-10"></div>
+							<div class="point-70"></div>
+						</li>
+						<li class="teacher-point-area8">
+							<i class="teacher-ico"></i>
+							<div class="point-10"></div>
+							<div class="point-70"></div>
+						</li>
+						<li class="teacher-point-area9">
+							<i class="teacher-ico"></i>
+							<div class="point-10"></div>
+							<div class="point-70"></div>
+						</li>
+						<li class="teacher-point-area10">
+							<i class="teacher-ico"></i>
+							<div class="point-10"></div>
+							<div class="point-70"></div>
+						</li>
+						<li class="teacher-point-area11">
+							<i class="teacher-ico"></i>
+							<div class="point-10"></div>
+							<div class="point-70"></div>
+						</li>
+					</ul>
+					<div class="line"></div>
+				</div>
+				<div class="active-right right">
+					<h2 class="active-h2">学习排行榜
+						<!-- <a href="javascirpt:;">查看更多</a> -->
+					</h2>
+					<div class="ranking-list">
+						<ul class="clearfix active-student-ul"><li class="top-three"><i class="first-ico ico"></i><img src="./经世优学_files/avatar.png" width="90"><p class="rank-title">状元</p><p class="rank-name text-over" title="叶杨-已学381.6h">叶杨-已学381.6h</p></li><li class="top-three"><i class="second-ico ico"></i><img src="./经世优学_files/avatar.png" width="90"><p class="rank-title">榜眼</p><p class="rank-name text-over" title="郝爽-已学147.4h">郝爽-已学147.4h</p></li><li class="top-three third-li"><i class="third-ico ico"></i><img src="./经世优学_files/avatar.png" width="90"><p class="rank-title">探花</p><p class="rank-name text-over" title="刘诗淼-已学127.0h">刘诗淼-已学127.0h</p></li><li class="rank-box" data-stuname="万粤黔" data-studylength="117.7" data-depname="泉州信息"><img src="./经世优学_files/avatar.png" width="50" height="50"></li><li class="rank-box" data-stuname="姚玉" data-studylength="116.9" data-depname="三峡大学"><img src="./经世优学_files/avatar.png" width="50" height="50"></li><li class="rank-box" data-stuname="邱千禧" data-studylength="116.7" data-depname="淮阴工学院"><img src="./经世优学_files/avatar.png" width="50" height="50"></li><li class="rank-box" data-stuname="刘宇" data-studylength="110.5" data-depname="三峡大学"><img src="./经世优学_files/avatar.png" width="50" height="50"></li><li class="rank-box" data-stuname="杨圣文" data-studylength="104.9" data-depname="黑农工"><img src="./经世优学_files/avatar.png" width="50" height="50"></li><li class="rank-box" data-stuname="程波" data-studylength="100.3" data-depname="武汉警官"><img src="./经世优学_files/avatar.png" width="50" height="50"></li><li class="rank-box" data-stuname="丁靓" data-studylength="99.3" data-depname="淮阴工学院"><img src="./经世优学_files/avatar.png" width="50" height="50"></li><li class="rank-box" data-stuname="尚苹苹" data-studylength="94.7" data-depname="武汉警官"><img src="./经世优学_files/avatar.png" width="50" height="50"></li><li class="rank-box" data-stuname="杨志贤" data-studylength="83.1" data-depname="淮阴工学院"><img src="./经世优学_files/avatar.png" width="50" height="50"></li><li class="rank-box" data-stuname="鲜于凯莉" data-studylength="79.4" data-depname="三峡大学"><img src="./经世优学_files/avatar.png" width="50" height="50"></li><li class="rank-box" data-stuname="黄佳琳" data-studylength="78.0" data-depname="三峡大学"><img src="./经世优学_files/avatar.png" width="50" height="50"></li><li class="rank-box" data-stuname="易伟" data-studylength="75.2" data-depname="三峡大学"><img src="./经世优学_files/avatar.png" width="50" height="50"></li><li class="rank-box" data-stuname="庞兴旺" data-studylength="74.8" data-depname="武汉警官"><img src="./经世优学_files/avatar.png" width="50" height="50"></li><li class="rank-box" data-stuname="乔德金" data-studylength="74.5" data-depname="淮阴工学院"><img src="./经世优学_files/avatar.png" width="50" height="50"></li><li class="rank-box" data-stuname="赵楚楚" data-studylength="70.1" data-depname="三峡大学"><img src="./经世优学_files/avatar.png" width="50" height="50"></li><li class="rank-box" data-stuname="叶杨" data-studylength="381.6" data-depname="武汉警官"><img src="./经世优学_files/avatar.png" width="50" height="50"></li><li class="rank-box" data-stuname="郝爽" data-studylength="147.4" data-depname="黑农工"><img src="./经世优学_files/avatar.png" width="50" height="50"></li><li class="rank-box" data-stuname="刘诗淼" data-studylength="127.0" data-depname="三峡大学"><img src="./经世优学_files/avatar.png" width="50" height="50"></li><li class="rank-box" data-stuname="万粤黔" data-studylength="117.7" data-depname="泉州信息"><img src="./经世优学_files/avatar.png" width="50" height="50"></li><li class="rank-box" data-stuname="姚玉" data-studylength="116.9" data-depname="三峡大学"><img src="./经世优学_files/avatar.png" width="50" height="50"></li><li class="rank-box" data-stuname="邱千禧" data-studylength="116.7" data-depname="淮阴工学院"><img src="./经世优学_files/avatar.png" width="50" height="50"></li><li class="rank-box" data-stuname="刘宇" data-studylength="110.5" data-depname="三峡大学"><img src="./经世优学_files/avatar.png" width="50" height="50"></li><li class="rank-box" data-stuname="杨圣文" data-studylength="104.9" data-depname="黑农工"><img src="./经世优学_files/avatar.png" width="50" height="50"></li><li class="rank-box" data-stuname="程波" data-studylength="100.3" data-depname="武汉警官"><img src="./经世优学_files/avatar.png" width="50" height="50"></li><li class="rank-box" data-stuname="丁靓" data-studylength="99.3" data-depname="淮阴工学院"><img src="./经世优学_files/avatar.png" width="50" height="50"></li><li class="rank-box" data-stuname="尚苹苹" data-studylength="94.7" data-depname="武汉警官"><img src="./经世优学_files/avatar.png" width="50" height="50"></li><li class="rank-box" data-stuname="杨志贤" data-studylength="83.1" data-depname="淮阴工学院"><img src="./经世优学_files/avatar.png" width="50" height="50"></li><li class="rank-box" data-stuname="鲜于凯莉" data-studylength="79.4" data-depname="三峡大学"><img src="./经世优学_files/avatar.png" width="50" height="50"></li><li class="rank-box" data-stuname="黄佳琳" data-studylength="78.0" data-depname="三峡大学"><img src="./经世优学_files/avatar.png" width="50" height="50"></li><li class="rank-box" data-stuname="易伟" data-studylength="75.2" data-depname="三峡大学"><img src="./经世优学_files/avatar.png" width="50" height="50"></li><li class="rank-box" data-stuname="庞兴旺" data-studylength="74.8" data-depname="武汉警官"><img src="./经世优学_files/avatar.png" width="50" height="50"></li><li class="rank-box" data-stuname="乔德金" data-studylength="74.5" data-depname="淮阴工学院"><img src="./经世优学_files/avatar.png" width="50" height="50"></li><li class="rank-box" data-stuname="赵楚楚" data-studylength="70.1" data-depname="三峡大学"><img src="./经世优学_files/avatar.png" width="50" height="50"></li></ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--名师展示-->
+		<div class="teacher-con">
+			<div class="main-con">
+				<h2 class="index-h2">优秀名师</h2>
+				<p class="index-des">实用案例深度解析，专业讲师为你带来设计界前沿的视频教程。设计技巧全面传授，提供成长道路上并不可少的技能。</p>
+				<div class="layui-carousel teacher-carousel" id="teacherCon" lay-anim="" lay-indicator="none" lay-arrow="always" style="width: 100%; height: 280px;">
+					<div carousel-item="">
+						<div class="teacher-item layui-this">
+							<ul class="teacher-ul">
+								<li>
+									<img src="./经世优学_files/laoshi1.png" width="280" height="340">
+									<div class="teacher-box">
+										<p class="teacher-text">
+											<span>黄伟</span> 九江职业技术学院
+										</p>
+										<p class="teacher-desc">
+											6年嵌入式项目研发经验，2年专业课授课经验。之前长期任职于从事电力系统行业某上市公司，擅长嵌入式软硬件研发、系统架构以及电力线载波通信路由算法的制定、协议编写。熟练掌握C、C++等编程语言，熟悉电路图绘制，掌握各类型MCU开发和应用。
+										</p>
+									</div>
+								</li>
+								<li>
+									<img src="./经世优学_files/laoshi2.png" width="280" height="340">
+									<div class="teacher-box">
+										<p class="teacher-text">
+											<span>徐新月</span> 大庆师范学院
+										</p>
+										<p class="teacher-desc">职业生涯规划师，国家二级企业人力资源管理师
+											，国家二级心理咨询师，主要研究人力资源管理方向，多年从事大型IT互联网公司人力资源管理工作，具有丰富的企业招聘、培训及职业生涯设计经验。现任高校职业导师，致力于职业规划、人才培养、就业与创业指导培训工作。
+										</p>
+									</div>
+								</li>
+								<li>
+									<img src="./经世优学_files/laoshi3.png" width="280" height="340">
+									<div class="teacher-box">
+										<p class="teacher-text">
+											<span>杜小平</span> 吉林电子信息职业技术学院
+										</p>
+										<p class="teacher-desc">
+											16年电信行业工作及多年的团队管理经验，先后任职中国电信、中国移动、技术经理等；对ICT行业有较深入的认知，对于光传输及无线通信的通信协议内容、技术发展、设备组网应用具有深入的理解。
+										</p>
+									</div>
+								</li>
+								<li>
+									<img src="./经世优学_files/laoshi4.png" width="280" height="340">
+									<div class="teacher-box">
+										<p class="teacher-text">
+											<span>李森</span> 辽宁装备制造职业技术学院
+										</p>
+										<p class="teacher-desc">
+											首席讲师，高级工程师。10年数据通讯设备调试工程经验。多次参与辽宁省内各地市城域网的割接及业务保障。在通信工程项目实施方面有着丰富的经验。在授课过程中能够充分的利用自己的工程经验优势，引入项目教学法，把实际的工程案例引入到教学中去，深受学生的喜爱及肯定。
+										</p>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<div class="teacher-item">
+							<ul class="teacher-ul">
+								<li>
+									<img src="./经世优学_files/laoshi5.png" width="280" height="340">
+									<div class="teacher-box">
+										<p class="teacher-text pad-tb-5">
+											<span>梁平</span> 黑龙江农业工程职业学院
+										</p>
+										<p class="teacher-desc">
+											6年的通信工程施工经验，曾担任数十个通信工程的工程督导和软件调试工作。4年的部门管理经验，达成与设备制造商的工程合作协议。2年的华为培训经验，主要是SDH和PTN设备的产品开通及维护。2年的通信工程设计工作，负责多个地市移动光网络产品的技术方案。4年的高职院校教育工作，主要负责光网络和数据通信产品的教学。
+										</p>
+									</div>
+								</li>
+								<li>
+									<img src="./经世优学_files/laoshi6.png" width="280" height="340">
+									<div class="teacher-box">
+										<p class="teacher-text">
+											<span>赖侦华</span> 贺州学院
+										</p>
+										<p class="teacher-desc">
+											国家注册一级建造师及工程管理工程师；在中国移动通信集团广西公司做为技术专家及工程项目经理先后负责广西移动TD-SCDMA、IP城域网、IP承载网、WLAN、GPON、家宽、集客、IMS等业务的工程建设管理、业务开通及故障处理工作。擅长利用不同的教学法提升课堂效果，深得学生喜爱。
+										</p>
+									</div>
+								</li>
+								<li>
+									<img src="./经世优学_files/laoshi7.png" width="280" height="340">
+									<div class="teacher-box">
+										<p class="teacher-text">
+											<span>郑平</span> 兰州城市学院
+										</p>
+										<p class="teacher-desc">
+											04年电信行业工作及多年的团队管理经验，先后任职高级工程师、技术经理、产品经理等；对ICT行业有较深入的认知，对于3G/4G的通信协议内容、技术发展、设备组网应用具有深入的理解。曾任职与某大型通信设备制造商企业，参与过较多的大型无线移动建设项目，积累了较多的项目交付经验和大型项目管理经验。
+										</p>
+									</div>
+								</li>
+								<li>
+									<img src="./经世优学_files/laoshi8.png" width="280" height="340">
+									<div class="teacher-box">
+										<p class="teacher-text">
+											<span>钟长发</span> 江西环境工程职业学院
+										</p>
+										<p class="teacher-desc">
+											高级网优工程师，长期从事无线网络规划与优化工程工作：在运营商网络建设中，历任工程督导、网络规划与优化技术专家、工程项目经理等岗位。先后为浙江电信、广东电信、江西移动、江西联通等贡献力量。高级企业讲师，从事7年的网规网优教学工作，深得学生好评，培养企业人才近千人。
+										</p>
+									</div>
+								</li>
+							</ul>
+						</div>
+
+					</div>
+				<div class="layui-carousel-ind"><ul><li class="layui-this"></li><li></li></ul></div><button class="layui-icon layui-carousel-arrow" lay-type="sub"></button><button class="layui-icon layui-carousel-arrow" lay-type="add"></button></div>
+			</div>
+		</div>
+		<!--优学发展  专注进取-->
+		<div class="count-con">
+			<div class="main-con">
+				<h2 class="index-h2">优学发展&nbsp;&nbsp;&nbsp;&nbsp;专注进取</h2>
+				<p class="index-des">经世优学汇聚全国高校优质课程、名师以及华晟经世的行业资源，旨在打造与行业、产业需求相融合的最新、最全、最便捷的一站式学习平台。</p>
+				<div class="layui-row">
+					<div class="layui-col-md3">
+						<div class="count-text clearfix">
+							<span class="counter course-num">5358</span>
+							<p class="count-p1 left">课程数量/门</p>
+							<p class="count-p2 right">本周新增<span>230</span><i class="up-ico"></i></p>
+						</div>
+					</div>
+					<div class="layui-col-md3">
+						<div class="count-text margin-l-25">
+							<span class="counter video-num">25951</span>
+							<p class="count-p1 left">视频数量/个</p>
+							<p class="count-p2 right">本周新增<span>1224</span><i class="up-ico"></i></p>
+						</div>
+					</div>
+					<div class="layui-col-md3">
+						<div class="count-text margin-l-50">
+							<span class="counter school-num">157</span>
+							<p class="count-p1 left">学校数量/所</p>
+							<p class="count-p2 right">今年新增<span>15</span><i class="up-ico"></i></p>
+						</div>
+					</div>
+					<div class="layui-col-md3">
+						<div class="count-text right">
+							<span class="counter user-num">68252</span>
+							<p class="count-p1 left">用户数量/人</p>
+							<p class="count-p2 right">今年新增<span>6756</span><i class="up-ico"></i></p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<footer class="footer" id="footer"><script>
+	var _hmt = _hmt || [];
+	(function () {
+		var hm = document.createElement("script");
+		hm.src = "https://hm.baidu.com/hm.js?2f10e1cf456ae7e5d8f4e51059ae92c0";
+		var s = document.getElementsByTagName("script")[0];
+		s.parentNode.insertBefore(hm, s);
+	})();
+</script>
+<div class="foot-line"></div>
+<div class="main-con footer-con">
+	<p class="footer-p1">版权所有：北京华晟经世信息技术有限公司 Copyright 2014-2019 huatec. All Rights Reserved<br>
+		<span>京ICP备13004545号-2 &nbsp;&nbsp;&nbsp;&nbsp; </span>
+		<a class="footer-a" style="display:inline-block;" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11011202000365" target="_blank"> <img src="./经世优学_files/guohui.png">&nbsp;京公网安备 11011202000365号</a></p>
+	<a class="footer-a" href="http://study.huatec.com/teacher/view3.6/version/version.html">关于版本</a>
+	<div class="erweima">
+		<img src="./经世优学_files/erweima.png" alt="">
+		<p>扫码下载手机APP</p>
+	</div>
+</div></footer>
+
+
+
+<script>
+	seajs.config({
+		map: [
+			[".css", ".css?v=" + config.version],
+			[".js", ".js?v=" + config.version]
+		]
+	});
+	seajs.use(["/common/js/index"], function (ev) {
+		ev.index();
+	});
+</script></body></html>
